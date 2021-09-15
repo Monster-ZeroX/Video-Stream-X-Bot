@@ -1,0 +1,60 @@
+{
+    "name": "Video Stream X Bot",
+    "description": "bot to stream video on telegram video chat, powered by pytgcalls and pyrogram , Project @dihanofficial",
+    "logo": "https://telegra.ph/file/3cf3743ea2c2235623edd.jpg",
+    "keywords": [
+        "pytgcalls",
+        "telegram bot",
+        "video stream"
+    ],
+    "website": "https://fzbots.me",
+    "repository": "https://github.com/MOnster-ZeroX/Video-Stream-X-Bot",
+    "success_url": "https://t.me/FZBOTS",
+    "env": {
+        "API_ID": {
+            "description": "Your APP_ID from my.telegram.org",
+            "required": true
+        },
+        "API_HASH": {
+            "description": "Your API_HASH from my.telegram.org",
+            "required": true
+        },
+        "BOT_TOKEN": {
+            "description": "Your bot token from @botfather",
+            "required": true
+        },
+        "BOT_USERNAME": {
+            "description": "Your bot username from @botfather",
+            "required": true
+        },
+        "ASSISTANT_NAME": {
+            "description": "Fill with the assistant username account without @",
+            "required": true
+        },
+        "SESSION_NAME": {
+            "description": "Fill with the pyrogram String Session",
+            "required": true
+        },
+        "SUDO_USERS": {
+            "description": "List of user ids to be added to sudo member list",
+            "required": true
+        },
+        "DURATION_LIMIT": {
+            "description": "Maximum duration limit for downloadable videos (in minutes)",
+            "required": true
+        }
+    },
+    "addons": [],
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    },
+    "stack": "heroku-20"
+}
